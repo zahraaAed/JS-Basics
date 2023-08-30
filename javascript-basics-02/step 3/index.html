@@ -8,5 +8,15 @@
   <form>
     <label for="name">Your name  : </label><input type="text" name="name" value="" id="name"/>
   </form>
+  <div class="new">
+  </div>
+  <script>
+    var targetdiv=document.querySelector(".new");
+    var targetinput=document.querySelector("#name");
+    targetinput.addEventListener("keyup", function() {
+      // Display the new text in an alert dialog
+      targetdiv.textContent=targetinput.value;
+    });
+  </script>
 </body>
 </html>
