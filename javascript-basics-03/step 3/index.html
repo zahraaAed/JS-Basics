@@ -14,5 +14,16 @@
   <div class="color red" ></div>
   <div class="color blue" ></div>
 </div>
+<script>
+  var targettext=document.querySelector('#text')
+  var colordiv=document.querySelectorAll('.color')
+  colordiv.forEach(function(colorDiv) {
+        colorDiv.addEventListener("click", function() {
+          var colorClass = this.classList[1]; // Assuming that the color class is the second class on the div
+          console.log(colorClass);
+          targettext.style.color = colorClass; // Apply the color to the text
+        });
+      });
+</script>
 </body>
 </html>
