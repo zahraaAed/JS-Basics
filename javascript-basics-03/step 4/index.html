@@ -10,5 +10,20 @@
     <label for="confirmation">Confirm : </label><input type="text" name="confirmation" value="" id="confirmation" />
     <button type="button" name="button" >Test</button>
   </form>
+  <script>
+    var password=document.querySelector('#password');
+    var confirmationInput = document.getElementById("confirmation");
+      var button = document.querySelector("button");
+
+      button.addEventListener("click", function() {
+        if (password.value !== confirmationInput.value) {
+          password.style.border = "1px solid red";
+          confirmationInput.style.border = "1px solid red";
+        } else {
+          password.style.border = "1px solid initial"; // Reverts to the initial (default) border color
+          confirmationInput.style.border = "1px solid initial"; // Reverts to the initial (default) border color
+        }
+        })
+  </script>
 </body>
 </html>
