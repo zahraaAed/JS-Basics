@@ -13,15 +13,13 @@
       <img src="images/image5.jpg" id="image5" />
     </div>
     <script>
-       var imgtarget1=document.querySelector('#image1');
-       var imgtarget2=document.querySelector('#image2');
-       var imgtarget3=document.querySelector('#image3');
-       var imgtarget4=document.querySelector('#image4');
-       var imgtarget5=document.querySelector('#image5');
-       imgtarget.addEventListener('mouseover', () => {
-
-imgtarget.setAttribute("src","images/image1_2.jpg")
-  });
+       var imgtarget=document.querySelectorAll('img');
+       for(let i=0; i< image.length;i++){
+        image[i].addEventListener("mouseover" , function(event){
+          event.target.src= 'images/image$(i+1)_2.jpg';
+        });
+       }
+     
     </script>
   </body>
 </html>
