@@ -11,5 +11,20 @@
     <label for="city">Your city  : </label><input type="text" name="city" value="New York" id="city" />
     <button type="button" name="button">Reset</button>
   </form>
+  <script> 
+    var targetButton = document.querySelector("button");
+    const inputs=document.querySelectorAll("input");
+    let ans;
+    targetButton.addEventListener("click", function() {
+ans=confirm("Confirm reseting");
+if(ans===true){
+
+     for(let inp of inputs){
+      inp.value="";
+     }
+    }
+  });
+
+  </script>
 </body>
 </html>
